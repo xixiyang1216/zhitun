@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+        div.box:first-of-type{
+              font-size: 16px;
+          }
+        div.box:last-child{
+            font-size: 32px;
+        }
+        p{
+            /*em的大小是基于父元素来计算的 更本的讲就是本身 字体大小*/
+            /*默认的字体大小是多少  16px*/
+            font-size: 2em;
+        }
+
+        html{
+            font-size: 32px;
+        }
+        div.rem{
+            /*?REM到底以谁为基准？   R？指的是root 根元素  html  以html的字体大小来计算的*/
+            /*默认的字体大小是多少  16px*/
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>ABC</p>
+        <div class="rem">ABC</div>
+    </div>
+    <div class="box">
+        <p>ABC</p>
+        <div class="rem">ABC</div>
+    </div>
+</body>
+</html>

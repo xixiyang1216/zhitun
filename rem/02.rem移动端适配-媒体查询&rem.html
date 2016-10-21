@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>rem</title>
+    <style>
+
+        @media screen and (max-width: 640px){
+            html{
+                font-size: 100px;
+            }
+        }
+        @media screen and (max-width: 480px){
+            html{
+                font-size: 75px;
+            }
+        }
+        @media screen and (max-width: 320px){
+            html{
+                font-size: 50px;
+            }
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 1rem;
+            /*320px  50px*/
+            /*640px  100px*/
+            width: 100%;
+            background: green;
+            font-size: 0.5rem;
+            line-height: 1rem;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        头部
+    </header>
+</body>
+</html>

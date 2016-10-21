@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html style="font-size: 50px">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>rem</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 1rem;
+            /*320px  50px*/
+            /*640px  100px*/
+            width: 100%;
+            background: green;
+            font-size: 0.5rem;
+            line-height: 1rem;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+    <script>
+        window.onresize = function(){
+            var size = 50;/*基准是320*/
+            var width = window.innerWidth;
+            /*根据当前的屏幕尺寸计算fontSize的值*/
+            var fontSize = 50/320*width;
+            /*动态设置字体大小*/
+            document.querySelector('html').style.fontSize = fontSize + 'px';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        头部
+    </header>
+</body>
+</html>

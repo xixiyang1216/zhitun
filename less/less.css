@@ -1,0 +1,82 @@
+@charset "utf-8";
+/*这个样的注释是会编译到css文件当中的*/
+/*1.变量*/
+/*怎么样定义一个变量  在js当在 var 变量名称*/
+/*变量的使用*/
+body {
+  color: #ff0000;
+}
+a:hover {
+  color: #ff0000;
+}
+/*2.mixin 混入*/
+.red {
+  color: red;
+}
+.border {
+  border: 1px solid #ccc;
+}
+/*要一个红色文字&&有边框的盒子*/
+/*class 混入*/
+.red_border {
+  color: red;
+  border: 1px solid #ccc;
+}
+/*函数 混入*/
+/*定义一个函数  js当中  function fuc(){}*/
+/*绿色文字&&圆角*/
+/*方法可以传参*/
+/*@len:10px 声明一个参数 叫做 @len  参数有默认的值10px*/
+.g_b_r {
+  color: green;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+/*3.嵌套*/
+/*wjs的头部样式*/
+.wjs_header {
+  border-bottom: 1px solid #ccc;
+}
+.wjs_header > .container > .row > div {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+.wjs_header > .container > .row > div + div {
+  border-left: 1px solid #ccc;
+}
+.wjs_header .wjs_app {
+  z-index: 99999;
+  display: block;
+}
+.wjs_header .wjs_app:hover img {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -60px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.wjs_header .wjs_app img {
+  display: none;
+}
+/*4.导入 Import*/
+/*在这个less文件当中定义变量*/
+/*在这个less文件当中定义方法*/
+a {
+  color: green;
+  border-radius: 10px;
+}
+/*5. 函数和运算 */
+b {
+  color: #000;
+}
+p {
+  color: #cccccc;
+}
